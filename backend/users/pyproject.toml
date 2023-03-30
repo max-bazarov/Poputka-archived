@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "users"
+version = "0.1.0"
+description = ""
+authors = ["Max Bazarov"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["all"], version = "^0.95.0"}
+sqlalchemy = "^2.0.7"
+alembic = "^1.10.2"
+asyncpg = "^0.27.0"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
+black = "^23.3.0"
+fastapi-users = {extras = ["sqlalchemy"], version = "^10.4.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
