@@ -14,3 +14,14 @@ ride = Table(
     Column('departure_point', String, nullable=False),
     Column('time', TIMESTAMP, nullable=False),
 )
+
+
+car = Table(
+    'car',
+    metadata,
+    Column('id', Integer, primary_key=True),
+    Column('make', String, nullable=False),
+    Column('model', String, nullable=False),
+    Column('year', Integer),
+    Column('license_plate_number', String, nullable=False),
+)
