@@ -1,13 +1,6 @@
+from datetime import datetime
 from typing import Optional
 from pydantic import BaseModel
-
-
-class CarRead(BaseModel):
-    id: int
-    make: str
-    model: str
-    year: int
-    license_plate_number: str
 
 
 class CarCreate(BaseModel):
@@ -17,6 +10,18 @@ class CarCreate(BaseModel):
     license_plate_number: str
 
 
-class RideRead(BaseModel):
+class CarRead(CarCreate):
+    id: int
+
+
+class RideCreate(BaseModel):
     driver: int
     car: CarRead
+    places: int
+    destination: str
+    departure_point: str
+    time: datetime
+
+
+class RideRead(RideCreate):
+    id: int
